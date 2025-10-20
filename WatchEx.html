@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WatchEx – Anime Player</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0b0b0d 0%, #1a1a24 100%);
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    header {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, #ff4b2b, #ff416c, #ff9100);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(255, 65, 108, 0.6);
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    p.tagline {
+      font-size: 1.1rem;
+      color: #aaa;
+      margin-top: -5px;
+    }
+
+    .player-container {
+      margin-top: 40px;
+      width: 85%;
+      max-width: 960px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      box-shadow: 0 0 25px rgba(255, 80, 120, 0.2);
+      overflow: hidden;
+      padding: 15px;
+      text-align: center;
+    }
+
+    iframe, video {
+      width: 100%;
+      height: 540px;
+      border: none;
+      border-radius: 12px;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #666;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .glow {
+      animation: pulse 2s infinite alternate;
+    }
+
+    @keyframes pulse {
+      from { text-shadow: 0 0 10px #ff416c, 0 0 20px #ff416c; }
+      to { text-shadow: 0 0 25px #ff9100, 0 0 40px #ff9100; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 class="glow">WatchEx</h1>
+    <p class="tagline">Your world of anime, anytime 💫</p>
+  </header>
+
+  <div class="player-container">
+    <!-- 🟢 Option 1: YouTube video -->
+    <iframe 
+      src="https://youtu.be/Pw_FLWePse0?si=yracISQDJi0CFZlr"
+      title="Anime Player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+
+    <!-- 🟠 Option 2: Local video file
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    -->
+  </div>
+
+  <footer>
+    © 2025 WatchEx — Made with ❤️ for anime fans
+  </footer>
+</body>
+</html>
